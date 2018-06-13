@@ -7,11 +7,22 @@
   </head>
   <body>
     <!-- Content -->
-	<table>
+	<table id = "myTable">
 		<caption align = "bottom"> Formulas and Results </caption>
 		<tr><th>Formula</th><th> Result</th></tr>
 		<tr><td>1 + 1</td><td>2</td></tr>
 		<tr><td>3 * 5</td><td>15</td></td></tr>
 	</table>
+	<button onclick = "myFunction()">Add Rows</button>
+	<script>
+		function myFunction() {
+		 var table = document.getElementById("myTable");
+		 var row = table.insertRow(3);
+		 var cell1 = row.insertCell(0);
+		 var cell2 = row.insertCell(1);
+		 cell1.innerHTML = "NEW CELL1";
+		 cell2.innerHTML = "NEW CELL2";
+	}
+	</script>
   </body>
 </html>
